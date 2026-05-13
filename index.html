@@ -394,8 +394,33 @@
 
     .benefits-grid {
       display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr 1fr;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
       gap: 1.1rem;
+    }
+    .split-discounts {
+      display: flex;
+      gap: 1.2rem;
+      align-items: stretch;
+      margin-top: 0.3rem;
+    }
+    .split-item { flex: 1; display: flex; flex-direction: column; }
+    .split-item .number { font-size: clamp(2.2rem, 4vw, 3rem); }
+    .split-item .split-desc {
+      font-size: 0.74rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.82);
+      margin-top: 0.4rem;
+    }
+    .split-divider {
+      width: 1px;
+      background: rgba(255, 255, 255, 0.22);
+      align-self: stretch;
+    }
+    @media (max-width: 480px) {
+      .split-discounts { flex-direction: column; gap: 0.9rem; }
+      .split-divider { width: 100%; height: 1px; }
     }
     .benefit-card {
       background: #fff;
@@ -974,8 +999,18 @@
       <div class="benefits-grid">
         <div class="benefit-card featured">
           <div>
-            <div class="label-top" style="color: rgba(255,255,255,0.78);">Efectivo o transferencia</div>
-            <div class="number">30%<small style="font-size: 1.6rem; font-weight: 700;"> OFF</small></div>
+            <div class="label-top" style="color: rgba(255,255,255,0.78);">Abonando en efectivo</div>
+            <div class="split-discounts">
+              <div class="split-item">
+                <div class="number">30%<small style="font-size: 1.3rem; font-weight: 700;"> OFF</small></div>
+                <span class="split-desc">Productos exhibidos</span>
+              </div>
+              <div class="split-divider"></div>
+              <div class="split-item">
+                <div class="number">15%<small style="font-size: 1.3rem; font-weight: 700;"> OFF</small></div>
+                <span class="split-desc">Productos a fabricar</span>
+              </div>
+            </div>
           </div>
           <p class="desc">Descuento directo sobre el precio de lista abonando el total en efectivo.</p>
         </div>
