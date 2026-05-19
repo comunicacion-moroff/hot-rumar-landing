@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hot Rumar Rumar Casa — Renová tu espacio con beneficios especiales</title>
-  <meta name="description" content="Hot Rumar Rumar Casa: 30% OFF abonando en efectivo y hasta 12 cuotas sin interés. Fábrica propia, más de 40 años fabricando en Argentina.">
+  <title>Mundial Rumar — Vení a buscar tu asiento para el mundial</title>
+  <meta name="description" content="Mundial Rumar: 30% OFF abonando en efectivo y hasta 12 cuotas sin interés. Vení a buscar tu asiento para el mundial. Fábrica propia, más de 40 años fabricando en Argentina.">
   <link rel="icon" type="image/png" href="img/favicon.png">
   <link rel="apple-touch-icon" href="img/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,22 +15,22 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Paleta del brief */
-      --bg:           #F5F0E8;
-      --bg-soft:      #EDE5D7;
+      /* Paleta Mundial Argentina */
+      --bg:           #F0F6FB;
+      --bg-soft:      #DCEBF6;
       --bg-card:      #FFFFFF;
-      --text:         #1E1E1E;
-      --text-mid:     #4A4640;
-      --text-muted:   #7B736A;
-      --brand:        #B23A32;
-      --brand-dark:   #A63832;
-      --brand-hover:  #962E27;
-      --secondary:    #C8B9A6;
-      --accent:       #7A8060;
-      --accent-soft:  #E4E7D6;
-      --accent-dark:  #4A5235;
-      --border:       #E2D9C9;
-      --border-soft:  #ECE4D6;
+      --text:         #0E2A47;
+      --text-mid:     #2E4A6A;
+      --text-muted:   #6B7F94;
+      --brand:        #4A90D9;
+      --brand-dark:   #3877BD;
+      --brand-hover:  #2E66A8;
+      --secondary:    #B8D4EA;
+      --accent:       #F6B40E;
+      --accent-soft:  #FFF1C6;
+      --accent-dark:  #8A6300;
+      --border:       #CADDEE;
+      --border-soft:  #E2ECF5;
 
       --font: 'Inter', system-ui, -apple-system, sans-serif;
 
@@ -88,9 +88,9 @@
     .btn-primary {
       background: var(--brand);
       color: #fff;
-      box-shadow: 0 6px 14px rgba(178, 58, 50, 0.22);
+      box-shadow: 0 6px 14px rgba(74, 144, 217, 0.22);
     }
-    .btn-primary:hover { background: var(--brand-hover); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(178, 58, 50, 0.28); }
+    .btn-primary:hover { background: var(--brand-hover); transform: translateY(-1px); box-shadow: 0 10px 22px rgba(74, 144, 217, 0.28); }
     .btn-ghost {
       background: transparent;
       color: var(--text);
@@ -172,7 +172,7 @@
       width: 8px; height: 8px;
       border-radius: 50%;
       background: var(--brand);
-      box-shadow: 0 0 0 4px rgba(178, 58, 50, 0.18);
+      box-shadow: 0 0 0 4px rgba(74, 144, 217, 0.18);
     }
     .hero h1 {
       font-size: clamp(2.4rem, 5.5vw, 4.1rem);
@@ -236,15 +236,15 @@
       border-radius: var(--radius-lg);
       overflow: hidden;
       background:
-        radial-gradient(ellipse at 30% 20%, #F8F1E5 0%, transparent 55%),
-        linear-gradient(160deg, #E5D9C5 0%, #C8B9A6 100%);
+        radial-gradient(ellipse at 30% 20%, #EAF4FB 0%, transparent 55%),
+        linear-gradient(160deg, #B8D4EA 0%, #75AADB 100%);
       box-shadow: var(--shadow-lg);
     }
     .hero-visual::before {
       content: '';
       position: absolute; inset: 0;
       background:
-        radial-gradient(circle at 75% 85%, rgba(178, 58, 50, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 75% 85%, rgba(246, 180, 14, 0.18) 0%, transparent 45%),
         radial-gradient(circle at 10% 90%, rgba(255,255,255,0.4) 0%, transparent 35%);
     }
     .hero-visual img {
@@ -275,7 +275,7 @@
       position: absolute;
       bottom: 1.4rem; left: 1.4rem;
       background: var(--accent);
-      color: var(--accent-dark);
+      color: #1E1E1E;
       padding: 0.55rem 1rem;
       border-radius: var(--radius-pill);
       font-size: 0.78rem;
@@ -336,7 +336,7 @@
     .field input:focus, .field select:focus {
       outline: none;
       border-color: var(--brand);
-      box-shadow: 0 0 0 3px rgba(178, 58, 50, 0.12);
+      box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.12);
     }
     .form-card button[type="submit"] {
       width: 100%;
@@ -499,7 +499,7 @@
     .product-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
     .product-visual {
       aspect-ratio: 4 / 3;
-      background: #FAF6EE;
+      background: #EAF4FB;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -559,7 +559,7 @@
       display: flex;
       gap: 1.2rem;
       width: max-content;
-      animation: carousel-scroll 40s linear infinite;
+      animation: carousel-scroll 24s linear infinite;
     }
     .carousel:hover .carousel-track { animation-play-state: paused; }
     @keyframes carousel-scroll {
@@ -580,7 +580,7 @@
     .carousel-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
     .carousel-image {
       aspect-ratio: 1 / 1;
-      background: #FAF6EE;
+      background: #EAF4FB;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -627,8 +627,8 @@
       aspect-ratio: 5 / 4;
       border-radius: var(--radius-lg);
       background:
-        radial-gradient(ellipse at 30% 30%, #F8F1E5 0%, transparent 60%),
-        linear-gradient(150deg, #D8C9B2 0%, #B5A187 100%);
+        radial-gradient(ellipse at 30% 30%, #EAF4FB 0%, transparent 60%),
+        linear-gradient(150deg, #B8D4EA 0%, #75AADB 100%);
       position: relative;
       overflow: hidden;
       box-shadow: var(--shadow-lg);
@@ -826,7 +826,7 @@
     .popup-card input:focus {
       outline: none;
       border-color: var(--brand);
-      box-shadow: 0 0 0 3px rgba(178, 58, 50, 0.12);
+      box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.12);
     }
     .popup-card button[type="submit"] { width: 100%; }
     .popup-dismiss {
@@ -907,7 +907,7 @@
     <div class="container header-inner">
       <a href="#" class="logo"><img src="img/logo.png" alt="Rumar Casa"></a>
       <div class="header-actions">
-        <span class="pill-hotsale">Hot Rumar</span>
+        <span class="pill-hotsale">Mundial Rumar</span>
         <a href="#form" class="btn btn-primary" style="padding: 0.6rem 1.1rem; font-size: 0.92rem;">Sumate</a>
       </div>
     </div>
@@ -917,9 +917,9 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="hero-eyebrow"><span class="dot"></span>Hot Rumar · Edición especial</span>
-        <h1>Hot<br><span class="accent">Rumar</span></h1>
-        <p class="hero-sub">Renová tu espacio con estos beneficios especiales. Diseño, confort y financiación.</p>
+        <span class="hero-eyebrow"><span class="dot"></span>Mundial Rumar · Edición especial</span>
+        <h1>Renová tu espacio<br>para este <span class="accent">mundial</span></h1>
+        <p class="hero-sub">Alentá a la Selección desde tu living. Nuestros productos están con beneficios de campeones, esperándote: diseño, confort y financiación para vos.</p>
 
         <div class="hero-perks">
           <div class="perk-chip"><strong>30% OFF</strong><span>abonando en efectivo</span></div>
@@ -927,13 +927,13 @@
         </div>
 
         <div class="hero-ctas">
-          <a href="#form" class="btn btn-primary btn-lg">Quiero info sobre la promo</a>
+          <a href="#form" class="btn btn-primary btn-lg">Quiero mi asiento mundialista</a>
           <a href="#productos" class="btn btn-ghost">Ver productos</a>
         </div>
 
         <div class="hero-trust">
           <span>Fábrica propia</span>
-          <span>Más de 40 años</span>
+          <span>Más de 40 años en Argentina</span>
           <span>Envíos a todo el país</span>
         </div>
       </div>
@@ -941,7 +941,7 @@
       <div class="hero-visual">
         <img src="img/hero.png" alt="Composición de productos Rumar Casa: sofá de tres cuerpos, sillón individual, silla, banqueta y mesa de centro de madera" fetchpriority="high">
         <span class="hero-badge"><strong>30%</strong><span>OFF Efectivo</span></span>
-        <span class="hero-badge-hotsale">Hot Rumar</span>
+        <span class="hero-badge-hotsale">Mundial Rumar</span>
       </div>
     </div>
   </section>
@@ -950,8 +950,8 @@
   <section class="form-section" id="form">
     <div class="container">
       <div class="form-card">
-        <h2>Recibí las novedades del Hot Rumar</h2>
-        <p class="lead">Dejanos tu mail para enterarte de todas las novedades.</p>
+        <h2>Sumate al equipo del Mundial Rumar</h2>
+        <p class="lead">Dejanos tu mail y te avisamos cada vez que metamos un gol con una nueva promo.</p>
 
         <form id="hotsale-form">
           <div class="form-grid">
@@ -980,10 +980,10 @@
               </select>
             </div>
           </div>
-          <button type="submit" class="btn btn-primary btn-lg">Sumarme</button>
-          <p class="form-fine">Te enviamos novedades y productos destacados mientras dure el Hot Rumar.</p>
+          <button type="submit" class="btn btn-primary btn-lg">Sumarme al equipo</button>
+          <p class="form-fine">Formá parte de nuestro equipo y no te pierdas ninguna de nuestras novedades.</p>
           <div class="form-success" id="form-success">
-            ¡Gracias! Te llegan las novedades por mail en las próximas horas. La promo ya está activa, podés aprovecharla en la tienda cuando quieras.
+            ¡Bienvenido al equipo! Te llegan las novedades por mail en las próximas horas. La promo ya está activa — vení a buscar tu asiento para el mundial cuando quieras.
           </div>
         </form>
       </div>
@@ -994,8 +994,8 @@
   <section class="benefits" id="beneficios">
     <div class="container">
       <div class="section-head">
-        <h2>Elegí el beneficio que más cómodo te quede</h2>
-        <p>Aprovechá el descuento más fuerte abonando en efectivo o financiá tu compra en cuotas sin interés.</p>
+        <h2>Elegí el asiento más cómodo para ver el mundial</h2>
+        <p>Aprovechá el descuento más fuerte abonando en efectivo o financiá tu compra en cuotas sin interés. Así llegás listo al primer partido.</p>
       </div>
 
       <div class="benefits-grid">
@@ -1053,8 +1053,8 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">Categorías</span>
-        <h2>¿Qué te gustaría renovar?</h2>
-        <p>Productos en stock disponibles para entrega rápida y opciones a fabricar a medida.</p>
+        <h2>¿Desde dónde vas a alentar?</h2>
+        <p>Productos en stock para llegar a tiempo al mundial y opciones a fabricar a medida para los más planificadores.</p>
       </div>
 
       <div class="products-grid">
@@ -1064,7 +1064,7 @@
           </div>
           <div class="product-body">
             <h3>Sofás</h3>
-            <p>Sillones de 2, 3 y 4 cuerpos. Elegí medidas, telas y terminaciones.</p>
+            <p>Sillones de 2, 3 y 4 cuerpos para que la previa la veas con toda la familia. Elegí medidas, telas y terminaciones.</p>
             <span class="product-cta">Ver opciones →</span>
           </div>
         </a>
@@ -1075,7 +1075,7 @@
           </div>
           <div class="product-body">
             <h3>Sillones individuales</h3>
-            <p>Butacas y sillones de un cuerpo para sumar confort y estilo a cualquier ambiente.</p>
+            <p>Tu butaca de capitán para los partidos clave. Confort y estilo en un solo cuerpo.</p>
             <span class="product-cta">Ver opciones →</span>
           </div>
         </a>
@@ -1086,7 +1086,7 @@
           </div>
           <div class="product-body">
             <h3>Sillas y banquetas</h3>
-            <p>Sillas de comedor, banquetas altas para isla y butacas decorativas.</p>
+            <p>Para los asados pre-partido y los terceros tiempos. Sillas de comedor, banquetas altas y butacas decorativas.</p>
             <span class="product-cta">Ver opciones →</span>
           </div>
         </a>
@@ -1098,38 +1098,32 @@
   <section class="carousel-section">
     <div class="container">
       <div class="section-head">
-        <h2>Productos destacados del Hot Rumar</h2>
+        <h2>El plantel destacado del Mundial Rumar</h2>
         <p>Una muestra de los modelos que entran a la promo. Para ver todo el catálogo, consultá en la tienda online.</p>
       </div>
     </div>
     <div class="carousel" aria-label="Productos destacados">
       <div class="carousel-track">
         <!-- Set 1 -->
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/sofa-chicago.png" alt="Sofá Chicago" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Chicago</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/sofa-chicago-sin-funda.png" alt="Sofá Chicago sin funda" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Chicago</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/sofa-ghost.png" alt="Sofá Ghost" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Ghost</span></div></article>
+        <a class="carousel-card" href="https://tienda.rumarcasa.com.ar/productos/sillon-chicago-con-funda/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/sofa-chicago.png" alt="Sofá Chicago" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Chicago</span></div></a>
+        <a class="carousel-card" href="https://tienda.rumarcasa.com.ar/productos/sillon-kairos-h8w4n/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/sofa-chicago-sin-funda.png" alt="Sofá Kairos" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Kairos</span></div></a>
         <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/sofa-individual-kairos.png" alt="Sillón individual Kairos" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sillón individual</span><span class="carousel-name">Kairos</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/sofa-individual-ghost.png" alt="Sillón individual Ghost" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sillón individual</span><span class="carousel-name">Ghost</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/silla-zambia.png" alt="Silla Zambia" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Silla</span><span class="carousel-name">Zambia</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/silla-monze.png" alt="Silla Monze" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Silla</span><span class="carousel-name">Monze</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/silla-mali.png" alt="Banqueta Mali" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Banqueta</span><span class="carousel-name">Mali</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/complemento-betu.png" alt="Complemento Betu" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Betu</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/complemento-dragon-fly.png" alt="Complemento Dragon Fly" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Dragon Fly</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/complemento-gh.png" alt="Complemento GH" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">GH</span></div></article>
-        <article class="carousel-card"><div class="carousel-image"><img src="img/carrusel/complemento-lerax.png" alt="Complemento Lerax" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Lerax</span></div></article>
+        <a class="carousel-card" href="https://tienda.rumarcasa.com.ar/productos/sillon-austin-individual-1tu7z/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/sofa-individual-ghost.png" alt="Sillón individual Austin" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sillón individual</span><span class="carousel-name">Austin</span></div></a>
+        <a class="carousel-card" href="https://tienda.rumarcasa.com.ar/productos/zambia-con-brazo1/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/silla-zambia.png" alt="Silla Zambia" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Silla</span><span class="carousel-name">Zambia</span></div></a>
+        <a class="carousel-card" href="https://tienda.rumarcasa.com.ar/productos/silla-mali-a73qw/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/silla-monze.png" alt="Silla Mali" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Silla</span><span class="carousel-name">Mali</span></div></a>
+        <a class="carousel-card" href="https://tienda.rumarcasa.com.ar/productos/banqueta-gh-i97bi/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/silla-mali.png" alt="Banqueta GH" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Banqueta</span><span class="carousel-name">GH</span></div></a>
+        <a class="carousel-card" href="https://tienda.rumarcasa.com.ar/productos/sofa-individual-betu-1605q/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/complemento-betu.png" alt="Complemento Betu" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Betu</span></div></a>
+        <a class="carousel-card" href="https://tienda.rumarcasa.com.ar/productos/dragon-fly/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/complemento-dragon-fly.png" alt="Complemento Dragon Fly" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Dragon Fly</span></div></a>
         <!-- Set 2 (duplicado para loop continuo) -->
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/sofa-chicago.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Chicago</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/sofa-chicago-sin-funda.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Chicago</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/sofa-ghost.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Ghost</span></div></article>
+        <a class="carousel-card" aria-hidden="true" tabindex="-1" href="https://tienda.rumarcasa.com.ar/productos/sillon-chicago-con-funda/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/sofa-chicago.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Chicago</span></div></a>
+        <a class="carousel-card" aria-hidden="true" tabindex="-1" href="https://tienda.rumarcasa.com.ar/productos/sillon-kairos-h8w4n/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/sofa-chicago-sin-funda.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sofá</span><span class="carousel-name">Kairos</span></div></a>
         <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/sofa-individual-kairos.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sillón individual</span><span class="carousel-name">Kairos</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/sofa-individual-ghost.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sillón individual</span><span class="carousel-name">Ghost</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/silla-zambia.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Silla</span><span class="carousel-name">Zambia</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/silla-monze.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Silla</span><span class="carousel-name">Monze</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/silla-mali.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Banqueta</span><span class="carousel-name">Mali</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/complemento-betu.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Betu</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/complemento-dragon-fly.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Dragon Fly</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/complemento-gh.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">GH</span></div></article>
-        <article class="carousel-card" aria-hidden="true"><div class="carousel-image"><img src="img/carrusel/complemento-lerax.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Lerax</span></div></article>
+        <a class="carousel-card" aria-hidden="true" tabindex="-1" href="https://tienda.rumarcasa.com.ar/productos/sillon-austin-individual-1tu7z/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/sofa-individual-ghost.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Sillón individual</span><span class="carousel-name">Austin</span></div></a>
+        <a class="carousel-card" aria-hidden="true" tabindex="-1" href="https://tienda.rumarcasa.com.ar/productos/zambia-con-brazo1/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/silla-zambia.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Silla</span><span class="carousel-name">Zambia</span></div></a>
+        <a class="carousel-card" aria-hidden="true" tabindex="-1" href="https://tienda.rumarcasa.com.ar/productos/silla-mali-a73qw/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/silla-monze.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Silla</span><span class="carousel-name">Mali</span></div></a>
+        <a class="carousel-card" aria-hidden="true" tabindex="-1" href="https://tienda.rumarcasa.com.ar/productos/banqueta-gh-i97bi/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/silla-mali.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Banqueta</span><span class="carousel-name">GH</span></div></a>
+        <a class="carousel-card" aria-hidden="true" tabindex="-1" href="https://tienda.rumarcasa.com.ar/productos/sofa-individual-betu-1605q/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/complemento-betu.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Betu</span></div></a>
+        <a class="carousel-card" aria-hidden="true" tabindex="-1" href="https://tienda.rumarcasa.com.ar/productos/dragon-fly/" target="_blank" rel="noopener"><div class="carousel-image"><img src="img/carrusel/complemento-dragon-fly.png" alt="" loading="lazy"></div><div class="carousel-info"><span class="carousel-cat">Complemento</span><span class="carousel-name">Dragon Fly</span></div></a>
       </div>
     </div>
   </section>
@@ -1142,7 +1136,7 @@
         <span class="trust-badge">Fábrica propia</span>
       </div>
       <div class="trust-content">
-        <h2>Comprá directo de fábrica</h2>
+        <h2>Comprá directo de fábrica argentina</h2>
         <p class="lead">En Rumar Casa fabricamos sillones, muebles y complementos con fábrica y carpintería propia. Te asesoramos para elegir medidas, telas, terminaciones y opciones de pago según tu espacio.</p>
         <ul class="trust-list">
           <li>
@@ -1173,10 +1167,10 @@
   <!-- ============== CIERRE / CTA FINAL ============== -->
   <section class="cta-final">
     <div class="container cta-final-inner">
-      <h2>¿Querés que te <span class="accent">asesoremos</span>?</h2>
-      <p>Contanos qué espacio te gustaría renovar y te ayudamos a elegir el mueble, la tela y la opción de pago que más te convenga. Te respondemos directo por WhatsApp.</p>
+      <h2>¿Querés tu <span class="accent">asiento</span> para el mundial?</h2>
+      <p>Contanos qué espacio querés renovar antes del primer partido y te ayudamos a elegir el mueble, la tela y la opción de pago que más te convenga. Te respondemos directo por WhatsApp.</p>
       <div class="cta-final-actions">
-        <a href="https://wa.me/5491123392350?text=Hola%21%20Quiero%20info%20del%20Hot%20Rumar" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
+        <a href="https://wa.me/5491123392350?text=Hola%21%20Quiero%20mi%20asiento%20para%20el%20Mundial%20Rumar" target="_blank" rel="noopener" class="btn btn-wa btn-lg">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.85 7.85 0 0 0 12 4a7.94 7.94 0 0 0-6.8 12L4 20l4.1-1.1A7.92 7.92 0 0 0 12 20a7.94 7.94 0 0 0 5.6-13.7zM12 18.5a6.5 6.5 0 0 1-3.3-.9l-.2-.1-2.4.6.6-2.3-.2-.2a6.55 6.55 0 1 1 5.5 2.9zm3.6-4.9c-.2-.1-1.2-.6-1.3-.7s-.3-.1-.5.1-.5.7-.6.8-.2.2-.4 0a5.2 5.2 0 0 1-2.6-2.3c-.2-.3.2-.3.5-1.1a.4.4 0 0 0 0-.4c0-.1-.5-1.1-.6-1.5s-.3-.4-.5-.4h-.4a.78.78 0 0 0-.6.2 2.31 2.31 0 0 0-.7 1.7 4 4 0 0 0 .8 2.1 9 9 0 0 0 3.4 3c.5.2.8.3 1.1.4a2.46 2.46 0 0 0 1.2.1 1.94 1.94 0 0 0 1.3-.9 1.6 1.6 0 0 0 .1-.9c0-.1-.2-.1-.4-.2z"/></svg>
           Escribir por WhatsApp
         </a>
@@ -1193,7 +1187,7 @@
   </footer>
 
   <!-- ============== WHATSAPP FLOTANTE ============== -->
-  <a href="https://wa.me/5491123392350?text=Hola%21%20Quiero%20info%20del%20Hot%20Rumar"
+  <a href="https://wa.me/5491123392350?text=Hola%21%20Quiero%20mi%20asiento%20para%20el%20Mundial%20Rumar"
      class="wa-float"
      target="_blank"
      rel="noopener"
@@ -1204,9 +1198,9 @@
   <!-- ============== POPUP EMAIL ============== -->
   <div class="popup-overlay" id="email-popup" hidden>
     <div class="popup-card" role="dialog" aria-labelledby="popup-title" aria-modal="true">
-      <span class="popup-eyebrow">Hot Rumar</span>
-      <h3 id="popup-title">Sumate y recibí las novedades del Hot Rumar</h3>
-      <p>Dejanos tu mail para enterarte de todas las novedades.</p>
+      <span class="popup-eyebrow">Mundial Rumar</span>
+      <h3 id="popup-title">Vení a buscar tu asiento para el mundial</h3>
+      <p>Dejanos tu mail para no perderte ninguna novedad y beneficios exclusivos.</p>
       <div class="popup-perks">
         <span>30% OFF</span>
         <span>12 cuotas</span>
@@ -1214,9 +1208,9 @@
       </div>
       <form id="popup-form">
         <input type="email" name="email" placeholder="tu@email.com" required autocomplete="email">
-        <button type="submit" class="btn btn-primary">Sumarme</button>
+        <button type="submit" class="btn btn-primary">Sumarme al equipo</button>
       </form>
-      <button class="popup-dismiss" id="popup-dismiss" type="button">No, gracias</button>
+      <button class="popup-dismiss" id="popup-dismiss" type="button">Ahora no</button>
     </div>
   </div>
 
@@ -1244,7 +1238,7 @@
       e.preventDefault();
       const data = Object.fromEntries(new FormData(form).entries());
       sendToSheets({ fuente: 'form', ...data });
-      console.log('Lead Hot Rumar:', data);
+      console.log('Lead Mundial Rumar:', data);
       success.classList.add('show');
       form.reset();
       success.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -1310,7 +1304,7 @@
       console.log('Popup lead:', { email });
       localStorage.setItem(POPUP_KEY, 'submitted');
       const card = popup.querySelector('.popup-card');
-      card.innerHTML = '<span class="popup-eyebrow">¡Gracias!</span><h3>Te llegan las novedades en las próximas horas</h3><p>La promo ya está activa — pasá por la tienda cuando quieras y aprovechá los beneficios.</p>';
+      card.innerHTML = '<span class="popup-eyebrow">¡Bienvenido al equipo!</span><h3>Ya tenés reservado tu asiento</h3><p>La promo está activa — te esperamos en el local para que vengas a buscar tu asiento para el mundial.</p>';
       setTimeout(() => hidePopup(false), 2500);
     });
   </script>
