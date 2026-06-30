@@ -10,6 +10,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1360863295952778');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1360863295952778&ev=PageView&noscript=1"/></noscript>
+  <!-- End Facebook Pixel Code -->
   <style>
     /* ─── Reset ───────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -359,6 +367,16 @@
       border: 1px solid #C4C8AE;
     }
     .form-success.show { display: block; }
+
+    /* Honeypot anti-bot — invisible para humanos, los bots lo completan */
+    .hp-field {
+      position: absolute !important;
+      left: -10000px !important;
+      top: auto !important;
+      width: 1px !important;
+      height: 1px !important;
+      overflow: hidden !important;
+    }
 
     /* ─── Beneficios ───────────────────────────────────── */
     .benefits {
@@ -739,6 +757,12 @@
       flex-wrap: wrap;
     }
     .footer-inner .logo { color: #fff; opacity: 0.9; }
+    .footer-inner a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .footer-inner a:hover { color: #fff; }
 
     /* ─── Popup email ──────────────────────────────────── */
     .popup-overlay {
@@ -829,15 +853,6 @@
       box-shadow: 0 0 0 3px rgba(74, 144, 217, 0.12);
     }
     .popup-card button[type="submit"] { width: 100%; }
-    .popup-dismiss {
-      display: block;
-      margin: 1rem auto 0;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-    .popup-dismiss:hover { color: var(--text); }
     .popup-perks {
       display: flex;
       gap: 1rem;
@@ -954,6 +969,10 @@
         <p class="lead">Dejanos tu mail y te avisamos cada vez que metamos un gol con una nueva promo.</p>
 
         <form id="hotsale-form">
+          <div class="hp-field" aria-hidden="true">
+            <label for="website-hp">Website</label>
+            <input type="text" id="website-hp" name="website" tabindex="-1" autocomplete="off">
+          </div>
           <div class="form-grid">
             <div class="field">
               <label for="nombre">Nombre</label>
@@ -981,7 +1000,7 @@
             </div>
           </div>
           <button type="submit" class="btn btn-primary btn-lg">Sumarme al equipo</button>
-          <p class="form-fine">Formá parte de nuestro equipo y no te pierdas ninguna de nuestras novedades.</p>
+          <p class="form-fine">Al dejarnos tus datos aceptás recibir novedades de Rumar Casa. Tratamos tu información según nuestra <a href="privacidad.html" style="color: var(--brand); text-decoration: underline; text-underline-offset: 2px;">política de privacidad</a>.</p>
           <div class="form-success" id="form-success">
             ¡Bienvenido al equipo! Te llegan las novedades por mail en las próximas horas. La promo ya está activa — vení a buscar tu asiento para el mundial cuando quieras.
           </div>
@@ -1182,7 +1201,7 @@
   <footer class="site-footer">
     <div class="container footer-inner">
       <span class="logo">RUMAR<span style="color: rgba(255,255,255,0.6); font-weight: 500;"> CASA</span></span>
-      <span>© Rumar Casa · Más de 40 años fabricando en Argentina · Envíos a todo el país</span>
+      <span>© Rumar Casa · Más de 40 años fabricando en Argentina · Envíos a todo el país · <a href="privacidad.html">Política de privacidad</a></span>
     </div>
   </footer>
 
@@ -1207,10 +1226,14 @@
         <span>Stock disponible</span>
       </div>
       <form id="popup-form">
+        <div class="hp-field" aria-hidden="true">
+          <label for="website-hp-popup">Website</label>
+          <input type="text" id="website-hp-popup" name="website" tabindex="-1" autocomplete="off">
+        </div>
         <input type="email" name="email" placeholder="tu@email.com" required autocomplete="email">
         <button type="submit" class="btn btn-primary">Sumarme al equipo</button>
+        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.8rem; line-height: 1.4;">Al dejarnos tu mail aceptás recibir novedades. Ver <a href="privacidad.html" style="color: var(--brand); text-decoration: underline;">política de privacidad</a>.</p>
       </form>
-      <button class="popup-dismiss" id="popup-dismiss" type="button">Ahora no</button>
     </div>
   </div>
 
@@ -1237,6 +1260,8 @@
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(form).entries());
+      if (data.website) return; // honeypot: bot detectado, abortar
+      delete data.website;
       sendToSheets({ fuente: 'form', ...data });
       console.log('Lead Mundial Rumar:', data);
       success.classList.add('show');
@@ -1247,17 +1272,14 @@
 
     // ─── Popup email ────────────────────────────────────
     const popup = document.getElementById('email-popup');
-    const popupDismiss = document.getElementById('popup-dismiss');
     const popupForm = document.getElementById('popup-form');
     const POPUP_KEY = 'rumar-popup';
     const POPUP_DELAY = 3000;
     const POPUP_SCROLL_RATIO = 0.30;
-    const POPUP_RETRY_DELAY = 120000; // 2 minutos antes de reaparecer
     let popupShown = false;
 
     function canShowPopup() {
-      const state = localStorage.getItem(POPUP_KEY);
-      return !state || state === 'dismissed-once';
+      return localStorage.getItem(POPUP_KEY) !== 'submitted';
     }
 
     function showPopup() {
@@ -1268,21 +1290,9 @@
       requestAnimationFrame(() => popup.classList.add('show'));
     }
 
-    function hidePopup(dismissed) {
+    function hidePopup() {
       popup.classList.remove('show');
       setTimeout(() => { popup.hidden = true; }, 300);
-      if (dismissed) {
-        const state = localStorage.getItem(POPUP_KEY);
-        if (state === 'dismissed-once') {
-          localStorage.setItem(POPUP_KEY, 'dismissed');
-        } else {
-          localStorage.setItem(POPUP_KEY, 'dismissed-once');
-          setTimeout(() => {
-            popupShown = false;
-            showPopup();
-          }, POPUP_RETRY_DELAY);
-        }
-      }
     }
 
     setTimeout(showPopup, POPUP_DELAY);
@@ -1294,18 +1304,17 @@
       if (scrolled / docHeight >= POPUP_SCROLL_RATIO) showPopup();
     }, { passive: true });
 
-    popupDismiss.addEventListener('click', () => hidePopup(true));
-
     popupForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      const email = popupForm.querySelector('input').value.trim();
+      if (popupForm.querySelector('input[name="website"]').value) return; // honeypot
+      const email = popupForm.querySelector('input[type="email"]').value.trim();
       if (!email) return;
       sendToSheets({ fuente: 'popup', email });
       console.log('Popup lead:', { email });
       localStorage.setItem(POPUP_KEY, 'submitted');
       const card = popup.querySelector('.popup-card');
       card.innerHTML = '<span class="popup-eyebrow">¡Bienvenido al equipo!</span><h3>Ya tenés reservado tu asiento</h3><p>La promo está activa — te esperamos en el local para que vengas a buscar tu asiento para el mundial.</p>';
-      setTimeout(() => hidePopup(false), 2500);
+      setTimeout(hidePopup, 2500);
     });
   </script>
 </body>
